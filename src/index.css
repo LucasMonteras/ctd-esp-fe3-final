@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{
+.temaButton{
   background-color: black;
   border-radius: 8px;
   transition: border-color 0.25s;
@@ -56,23 +56,51 @@ a:hover{
 
 footer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
-  padding: 2rem;
+  /*padding: 2rem;*/
   position: relative;
   bottom: 0;
-  width: 90%;
-  height: 40px;
+  width: 100%;
+  height: 80px;
   margin-top: 2rem;
 }
 
-footer > img{
+.iconos{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.iconoRedes{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.DH-logo{
   width: 200px;
   margin: 0;
+  margin-right: 200px;
+}
+
+.logoRedes{
+  background-color: black;
+  width: 15px;
+  margin-left: 15px;
+  height: 10px;
+}
+
+footer > img{
+  /*width: 200px;*/
+  /*margin: 0;*/
+  
 }
 footer > p{
+  background-color: red;
   margin: 0;
   padding-top: 0.7rem;
+  padding-bottom:0.7rem;
 }
 
 form{
@@ -84,6 +112,8 @@ form{
   margin: 0 auto;
 }
 
+
+
 .card{
   display: flex;
   justify-content: space-around;
@@ -92,6 +122,25 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+}
+
+.card-img{
+  width: 198px;
+  height: 250px;
+  object-fit: cover;
+  
+}
+
+.favButton{
+  background-color: rgba(245, 215, 215, 0.781);
+  width: 198px;
+  height: 30px;
+  transition: border-color 0.25s;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  
+  
 }
 
 .card:hover{
@@ -109,7 +158,7 @@ form{
 }
 
 table {
- border-collapse: collapse;
+border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;

@@ -9,6 +9,7 @@ import Favs from './Routes/Favs'
 function App() {
   return (
       <div className="App">
+        
         <Routes>
           <Route path="/" element={<Layout/>}/>
           <Route path={routes.home} element={<Home/>}/>
