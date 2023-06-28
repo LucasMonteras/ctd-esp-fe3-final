@@ -25,6 +25,11 @@ h1{
   text-align: center;
 }
 
+h2::first-letter{
+  color:red;
+
+}
+
 nav{
   background-color: rgba(241, 220, 220, 0.507);
   display: flex;
@@ -79,16 +84,18 @@ footer {
 }
 
 .DH-logo{
-  width: 200px;
+  width: 250px;
+  height: 60px;
   margin: 0;
   margin-right: 200px;
 }
 
 .logoRedes{
-  background-color: black;
-  width: 15px;
-  margin-left: 15px;
-  height: 10px;
+  width: 30px;
+  margin-left: 20px;
+  height: 30px;
+  gap: 500px; 
+  filter: brightness(0);
 }
 
 footer > img{
@@ -157,12 +164,24 @@ form{
   margin: 0 auto;
 }
 
-table {
+
+
+.table {
 border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
+    
     display: table;
     border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.datos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 

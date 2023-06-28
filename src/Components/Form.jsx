@@ -39,7 +39,7 @@ const handeleSubmit=(event)=>{
         <button>Send</button>
         {error && 'Por favor verifique su información nuevamente'}
       </form>
-      {show ? <p>'Gracias {user.userName}  , te contactaremos cuando antes vía mail'</p> : null}
+      {show ? <p>'Gracias {user.userName}  , te contactaremos cuanto antes vía mail'</p> : null}
     </div>
   );
 };
