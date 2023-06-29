@@ -34,8 +34,8 @@ const Home = () => {
         {/*<Card name={odontologo.name} username={odontologo.username} id={odontologo.id}/>)*/} 
         
         {odontState.odonList.map(odontologo=> <Link to={'/detail/' + odontologo.id} key={odontologo.id}>
-        <Card name={odontologo.name} username={odontologo.username} id={odontologo.id}/>
-          </Link>)}
+          <Card name={odontologo.name} username={odontologo.username} id={odontologo.id}/>
+        </Link>)}
       </div>
     </main>
   )

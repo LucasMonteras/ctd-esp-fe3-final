@@ -15,15 +15,21 @@ export const ContextGlobal = createContext(undefined);
 
   const initialOdonState ={
     odonList:[],
-    odontologo:{}
+    odontologo:{},
+    favs: JSON.parse(localStorage.getItem('favs')) ||  []
+
   }
 
   const odonReducer = (state,action) =>{
     switch(action.type){
       case 'GET_LIST':
-        return{odonList: action.payload, odontologo: state.odontologo}
+        return{ ...state,odonList: action.payload}
       case'GET_ODONT':
-        return {odonList: state.odonList, odontologo: action.payload}
+        return {...state, odontologo: action.payload}
+      case'FAVS':
+        return {...state, favs: [...state.favs, action.payload]}
+      case'DELETE_FAVS':
+        return {...state,favs: action.payload}
       default:
         throw new Error('No existe el tipo de accion')
     }
@@ -43,6 +49,12 @@ export const ContextProvider = ({ children }) => {
       .then(res=>odonDispatch({type:'GET_LIST',payload: res.data})) 
       .catch(err=>console.log(err))
     },[])
+
+
+    useEffect(()=>{
+      localStorage.setItem('favs',JSON.stringify(odontState.favs))
+    },[odontState.favs])
+
 
       console.log(odontState);
   return (
