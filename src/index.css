@@ -100,8 +100,8 @@ footer {
 }
 
 footer > img{
-  /*width: 200px;*/
-  /*margin: 0;*/
+  width: 200px;
+  margin: 0;
   
 }
 footer > p{
@@ -205,7 +205,7 @@ tr:nth-child(even) {
 }
 
 .dark{
-  background-color: #12121296;
+  background-color: #2c2b2b96;
   color: white;
 }
 .dark > a {

@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import {useOdonStates} from "../Components/utils/global.context";
+import {useOdonStates, useThemeStates} from "../Components/utils/global.context";
 import doctor from '../assets/doctor.jpg'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
+
+  const { theme } = useThemeStates();
 
   const {odonDispatch,odontState} = useOdonStates()
 
@@ -17,7 +19,7 @@ const Favs = () => {
 
 
   return (
-    <>
+    <div style={{ background: theme.background, color: theme.font }}>
       <Navbar/>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
@@ -35,7 +37,7 @@ const Favs = () => {
           )}
       </div>
       <Footer/>
-    </>
+    </div>
   );
 };
 

@@ -1,12 +1,21 @@
 import axios from "axios";
 import { createContext, useReducer } from "react";
 import {  useContext ,useState,useEffect } from "react";
+import { themes } from "./themes";
+import { themeReducer } from "./themesReducer";
 
 
 
-export const initialState = {theme: "", data: []}
+const InitialThemeState = { theme: themes.light };
 
-export const ContextGlobal = createContext(undefined);
+const ThemeStates = createContext();
+
+
+
+
+
+
+
 
 
 
@@ -41,6 +50,14 @@ export const ContextGlobal = createContext(undefined);
 export const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, 
 
+  const [state, dispatch] = useReducer(themeReducer, InitialThemeState);
+  const setTheme = (theme) => {
+    dispatch({ type: 'SET_THEME', payload: theme });
+  };
+
+
+
+
     const [odontState, odonDispatch] = useReducer (odonReducer, initialOdonState)
     const urlList ='https://jsonplaceholder.typicode.com/users'
 
@@ -58,14 +75,15 @@ export const ContextProvider = ({ children }) => {
 
       console.log(odontState);
   return (
-    <ContextGlobal.Provider value={{}}>
+    <ThemeStates.Provider value={{theme: state.theme,
+      setTheme,}}>
       <OdonState.Provider value={{odontState,odonDispatch}} >
       {children}
       </OdonState.Provider>
       
-    </ContextGlobal.Provider>
+    </ThemeStates.Provider>
   );
 };
-
+export const useThemeStates = () => useContext(ThemeStates);
 export const useOdonStates =() => useContext(OdonState)
 

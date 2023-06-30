@@ -4,18 +4,21 @@ import facebook from '../assets/ico-facebook.png'
 import instagram from '../assets/ico-instagram.png'
 import tiktok from '../assets/ico-tiktok.png'
 import whatsapp from '../assets/ico-whatsapp.png'
+import { useThemeStates } from './utils/global.context'
 
 
 const Footer = () => {
+  const { theme, setTheme } = useThemeStates();
+
   return (
-    <footer>
+    <footer >
         <p>Powered by</p>
-        <div className='iconos'>
-          <div>
+        <div style={{ background: theme.background, color: theme.font }} className='iconos'>
+          <div >
             <img  className='DH-logo' src={DH} alt='DH-logo' />
           </div>
           <div className='iconoRedes'>
-            <img className='logoRedes' src={facebook} alt='logo-facebook' /> 
+            <img  className='logoRedes' src={facebook} alt='logo-facebook' /> 
             <img className='logoRedes' src={instagram} alt='logo-instagram' />
             <img className='logoRedes' src={tiktok} alt='logo-tiktok' />
             <img className='logoRedes' src={whatsapp} alt='logo-whatsapp' />
