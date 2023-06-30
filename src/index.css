@@ -31,7 +31,7 @@ h2::first-letter{
 }
 
 nav{
-  background-color: rgb(26, 194, 216);
+  background-color:#77E1FD;
   display: flex;
   justify-content: space-around;
   padding: 10px;
@@ -105,7 +105,7 @@ footer > img{
   
 }
 footer > p{
-  background-color: rgb(26, 194, 216);
+  background-color: #77E1FD;
   margin: 0;
   padding-top: 0.7rem;
   padding-bottom:0.7rem;
@@ -144,11 +144,12 @@ form{
   width: 198px;
   height: 250px;
   object-fit: cover;
+  border-radius: 20px;
   
 }
 
 .favButton{
-  background-color: rgba(82, 230, 241, 0.781);
+  background-color: #AEEDFD;
   width: 200px;
   height: 30px;
   transition: border-color 0.25s;
@@ -161,7 +162,7 @@ form{
 
 
 .card:hover{
-  border: 0.5px solid rgb(15, 19, 228);
+  border: 0.5px solid #1236F9;
 }
 
 .card-grid{
@@ -205,7 +206,7 @@ tr:nth-child(even) {
 }
 
 .dark{
-  background-color: #2c2b2b96;
+  background-color: #1b1a1a96;
   color: white;
 }
 .dark > a {
