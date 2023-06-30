@@ -17,7 +17,7 @@ export const ContextGlobal = createContext(undefined);
     odonList:[],
     odontologo:{},
     favs: JSON.parse(localStorage.getItem('favs')) ||  []
-
+    
   }
 
   const odonReducer = (state,action) =>{
@@ -33,7 +33,7 @@ export const ContextGlobal = createContext(undefined);
       default:
         throw new Error('No existe el tipo de accion')
     }
-
+    
   }
 
 

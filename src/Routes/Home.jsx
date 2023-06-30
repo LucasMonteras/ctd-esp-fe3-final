@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from '../Components/Card'
 import { useOdonStates } from '../Components/utils/global.context'
-import { Link } from 'react-router-dom'
+
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -17,7 +17,12 @@ const Home = () => {
 */}
 
 
-  const {odontState} = useOdonStates()
+  const {odontState,odonDispatch} = useOdonStates()
+
+
+
+
+
 
   {/*<Card name={odon.name} username={odon.username} id={odon.id}>*/}
   {/*</Card>*/}
@@ -29,9 +34,14 @@ const Home = () => {
         { /*  doctores.map(doctor=><Card name={doctor.name} username={doctor.username} id={doctor.id} />)*/} 
         {/*<Card name={odontologo.name} username={odontologo.username} id={odontologo.id}/>)*/} 
         
-        {odontState.odonList.map(odontologo=> <Link to={'/detail/' + odontologo.id} key={odontologo.id}>
-          <Card name={odontologo.name} username={odontologo.username} id={odontologo.id}/>
-        </Link>)}
+        {odontState.odonList.map(odontologo=> 
+          <div className="cardHome"> 
+            
+            <Card key={odontologo.id} odontologo={odontologo} name={odontologo.name} username={odontologo.username} id={odontologo.id}  />
+            
+            {/*<button onClick={addFav} className="favButton">⭐</button>*/}
+        </div>
+        )}
       </div>
     </main>
   )

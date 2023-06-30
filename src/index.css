@@ -26,12 +26,12 @@ h1{
 }
 
 h2::first-letter{
-  color:red;
+  color:rgba(235, 235, 243, 0.678);
 
 }
 
 nav{
-  background-color: rgba(241, 220, 220, 0.507);
+  background-color: rgb(26, 194, 216);
   display: flex;
   justify-content: space-around;
   padding: 10px;
@@ -47,6 +47,7 @@ nav{
 
 .link{
   margin-left: 10px;
+  
 }
 
 a{
@@ -56,7 +57,7 @@ a{
   cursor: pointer;
 }
 a:hover{
-  color: rgb(136, 136, 136);
+  color:rgb(90, 76, 216);
 } 
 
 footer {
@@ -104,7 +105,7 @@ footer > img{
   
 }
 footer > p{
-  background-color: red;
+  background-color: rgb(26, 194, 216);
   margin: 0;
   padding-top: 0.7rem;
   padding-bottom:0.7rem;
@@ -123,12 +124,20 @@ form{
 
 .card{
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  border: 0.5px solid rgb(26, 194, 216);
+  border-radius: 15px;
+}
+
+.cardHome{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-img{
@@ -139,8 +148,8 @@ form{
 }
 
 .favButton{
-  background-color: rgba(247, 172, 172, 0.781);
-  width: 198px;
+  background-color: rgba(82, 230, 241, 0.781);
+  width: 200px;
   height: 30px;
   transition: border-color 0.25s;
   border: 1px solid transparent;
@@ -150,8 +159,9 @@ form{
   
 }
 
+
 .card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 0.5px solid rgb(15, 19, 228);
 }
 
 .card-grid{
@@ -169,7 +179,6 @@ form{
 .table {
 border-collapse: collapse;
     border-spacing: 0;
-    
     display: table;
     border: 1px solid #ccc;
     display: flex;

@@ -26,12 +26,11 @@ const Favs = () => {
 
         {odontState.favs.map(odon=> 
             <div className="card">
-                  
               <img className="card-img" src={doctor} alt="" />
               <h4>{odon.name}</h4>
               <h3>{odon.username}</h3>
               <h3>{odon.id}</h3>
-              <button onClick={() => deleteFav(odon)} className="favButton">💀</button>
+              <button onClick={() => deleteFav(odon)} className="favButton">💀👨🏾‍⚕️</button>
             </div>
           )}
       </div>
