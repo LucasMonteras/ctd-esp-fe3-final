@@ -1,10 +1,7 @@
 import React, { useEffect } from "react";
-import Card from "../Components/Card";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import {useOdonStates} from "../Components/utils/global.context";
-import { Link } from "react-router-dom";
-import { routes } from "../Components/utils/routes";
 import doctor from '../assets/doctor.jpg'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 

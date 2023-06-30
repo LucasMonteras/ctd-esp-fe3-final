@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useOdonStates } from '../Components/utils/global.context'
 import { useParams } from 'react-router-dom'
-import { response } from 'msw'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 
@@ -31,8 +30,6 @@ const Detail = () => {
       <h1>Detail Dentist id </h1>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
- 
- 
     <div className='table'>
       <div className='datos'>
         <h3>Name</h3>
